@@ -57,6 +57,8 @@ for i in range(numberemail):
     email,firstname,lastname,fullname,username,gender,birthday = getalldata(gen,suffiks,mail,rangeyear1,rangeyear2)
     dataperson = [email,firstname,lastname,fullname,username,gender,birthday]
     alldata.append(dataperson)
+    print('====> email data person ',i)
 
 df = pd.DataFrame(alldata,columns=("email","firstname","lastname","fullname","username","gender","birthday"))
+print()
 print(df)
