@@ -1,6 +1,7 @@
 from distutils.command.build_scripts import first_line_re
 import email
 from getpass import getuser
+from msilib.schema import File
 from matplotlib.pyplot import get
 import names as nm
 import pandas as pd
@@ -60,5 +61,10 @@ for i in range(numberemail):
     print('====> email data person ',i)
 
 df = pd.DataFrame(alldata,columns=("email","firstname","lastname","fullname","username","gender","birthday"))
+
+file_name = 'emaildata.xlsx'
+
+df.to_excel(file_name,sheet_name="Try 1")
+
 print()
-print(df)
+print('=============== Save to excel ==================')
